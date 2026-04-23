@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/docite-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/docite-{{ version }}.tar.gz
   sha256: 832653579758212deb68cb03b9be62e6210d1c1a11f3c23b9178166a39c52a12
 
 build:
   entry_points:
     - docite = docite.cli:run
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
